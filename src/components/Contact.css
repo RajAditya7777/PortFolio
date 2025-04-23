@@ -1,0 +1,184 @@
+.contact {
+  background-color: var(--background-color);
+  padding: calc(var(--spacing-unit) * 12) 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.contact h2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  color: var(--text-color);
+}
+
+.contact-intro {
+  color: var(--secondary-color);
+  max-width: 600px;
+  margin: 0 auto calc(var(--spacing-unit) * 8);
+  font-size: 1.2rem;
+}
+
+.contact-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--spacing-unit) * 8);
+}
+
+.contact-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-unit);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1.5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  cursor: text;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.1);
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  margin-top: calc(var(--spacing-unit) * 4);
+  cursor: pointer;
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: #4dabff;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 6);
+}
+
+.contact-option {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: calc(var(--spacing-unit) * 4);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.contact-option h3 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  color: var(--text-color);
+}
+
+.schedule-btn {
+  display: inline-block;
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.schedule-btn:hover {
+  background-color: #4dabff;
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: white;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.contact-link {
+  display: block;
+  padding: calc(var(--spacing-unit) * 2);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  cursor: pointer;
+  text-align: center;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transform: translateY(-2px);
+  color: var(--text-color);
+}
+
+.error-message {
+  color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  font-size: 0.9rem;
+}
+
+.success-message {
+  color: #00C851;
+  background-color: rgba(0, 200, 81, 0.1);
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  font-size: 0.9rem;
+}
+
+.submit-btn:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-btn:disabled:hover {
+  background-color: var(--secondary-color);
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: calc(var(--spacing-unit) * 8) 0;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing-unit) * 6);
+  }
+} 

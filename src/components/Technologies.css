@@ -1,0 +1,112 @@
+.technologies {
+  background-color: var(--background-color);
+  padding: calc(var(--spacing-unit) * 12) 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.technologies h2 {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  color: var(--text-color);
+}
+
+.tech-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: calc(var(--spacing-unit) * 4);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+.tech-section {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-unit) * 4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  position: relative;
+  z-index: 2;
+}
+
+.tech-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tech-section h3 {
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  font-size: 1.5rem;
+  padding-bottom: calc(var(--spacing-unit) * 2);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tech-grid {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 2);
+  margin: 0 auto;
+}
+
+.tech-item {
+  background-color: var(--light-gray);
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  gap: calc(var(--spacing-unit) * 2);
+  position: relative;
+  z-index: 3;
+}
+
+.tech-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.tech-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color);
+}
+
+.tech-item:hover span {
+  color: white;
+}
+
+.tech-item span {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .technologies {
+    padding: calc(var(--spacing-unit) * 8) 0;
+  }
+
+  .tech-sections {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 6);
+  }
+
+  .tech-section {
+    min-width: auto;
+    padding: calc(var(--spacing-unit) * 3);
+  }
+
+  .tech-item {
+    min-height: 50px;
+  }
+} 
