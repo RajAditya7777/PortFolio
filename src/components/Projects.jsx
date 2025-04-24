@@ -8,7 +8,7 @@ const Projects = () => {
       description: "A responsive portfolio website built with HTML and CSS, featuring nature-inspired designs. The project includes responsive design, hover effects, and a user-friendly interface that ensures smooth navigation across all devices.",
       technologies: ["HTML", "CSS", "Responsive Design"],
       image: "https://iili.io/3MK87jV.jpg",
-      link: "https://capstone-tawny-seven.vercel.app",
+      link: "https://capstone-tawny-seven.vercel.app/",
       github: "https://github.com/RajAditya7777/CapstoneSNW"
     },
     {
@@ -17,15 +17,9 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript"],
       image: "https://iili.io/3MKs4Nn.jpg",
       link: "https://calculator-one-kappa-94.vercel.app/",
-      github: "https://github.com/RajAditya7777/Calculator.git"
+      github: "https://github.com/RajAditya7777/Calculator"
     }
   ];
-
-  const handleLinkClick = (e, url) => {
-    e.preventDefault();
-    console.log('Attempting to open URL:', url);
-    window.location.href = url;
-  };
 
   return (
     <section className="projects" id="projects">
@@ -48,9 +42,10 @@ const Projects = () => {
               </div>
               <div className="project-links">
                 <a 
-                  href={project.link} 
+                  href={project.title === "Calculator" ? "https://calculator-one-kappa-94.vercel.app/" : project.link}
                   className="project-link"
-                  onClick={(e) => handleLinkClick(e, project.link)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   View Project
                 </a>
@@ -58,7 +53,8 @@ const Projects = () => {
                   <a 
                     href={project.github} 
                     className="project-link github"
-                    onClick={(e) => handleLinkClick(e, project.github)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View Code
                   </a>

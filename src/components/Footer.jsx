@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; Copyright {new Date().getFullYear()} Portfolio</p>
+          <p>&copy;{new Date().getFullYear()} Aditya Raj Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>
