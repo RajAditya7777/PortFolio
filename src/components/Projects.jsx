@@ -18,6 +18,14 @@ const Projects = () => {
       image: "https://iili.io/3MKs4Nn.jpg",
       link: "https://calculator-one-kappa-94.vercel.app/",
       github: "https://github.com/RajAditya7777/Calculator"
+    },
+    {
+      title: "Myntra Clone",
+      description: "Recreated the Myntra website layout with a focus on static front-end design and responsive styling. The project mimics the UI/UX of an e-commerce platform, ensuring visual consistency and adaptability across devices.",
+      technologies: ["HTML", "CSS", "Responsive Design", "UI/UX"],
+      image: "https://iili.io/3XHGAcG.jpg",
+      link: "https://myntra-clone-snowy-ten.vercel.app/",
+      github: "https://github.com/RajAditya7777/Myntra-Clone.git"
     }
   ];
 
@@ -42,7 +50,7 @@ const Projects = () => {
               </div>
               <div className="project-links">
                 <a 
-                  href={project.title === "Calculator" ? "https://calculator-one-kappa-94.vercel.app/" : project.link}
+                  href={project.link}
                   className="project-link"
                   target="_blank"
                   rel="noopener noreferrer"
