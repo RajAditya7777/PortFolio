@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -27,14 +28,30 @@ const Contact = () => {
     setFormStatus({ submitting: true, submitted: false, error: null });
 
     try {
-      // Here you would typically make an API call to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Replace these with your EmailJS credentials
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'Aditya Raj',
+      };
+
+      await emailjs.send(
+        'service_g3vojpr', // Your EmailJS service ID
+        'template_qw22x71', // Your EmailJS template ID
+        templateParams,
+        'lEUYbbxs_ti93c39S' // Your EmailJS public key
+      );
       
       setFormStatus({ submitting: false, submitted: true, error: null });
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      setFormStatus({ submitting: false, submitted: false, error: 'Failed to send message. Please try again.' });
+      console.error('Error sending email:', error);
+      setFormStatus({ 
+        submitting: false, 
+        submitted: false, 
+        error: 'Failed to send message. Please try again or email me directly.' 
+      });
     }
   };
 
@@ -109,7 +126,7 @@ const Contact = () => {
           <div className="contact-option">
             <h3>Schedule a call</h3>
             <a 
-              href="https://calendly.com/yourusername" 
+              href="https://calendly.com/aditya-raj88005" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="schedule-btn"
@@ -120,7 +137,7 @@ const Contact = () => {
           
           <div className="contact-links">
             <a 
-              href="mailto:adityaraj7777@gmail.com" 
+              href="mailto:aditya.raj88005@gmail.com" 
               className="contact-link"
             >
               Email
