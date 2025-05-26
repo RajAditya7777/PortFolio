@@ -7,6 +7,7 @@ import Technologies from './components/Technologies'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import UiUxDesigns from './components/UiUxDesigns'
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="uiux-designs">
+          <UiUxDesigns />
         </section>
         <section id="contact">
           <Contact />

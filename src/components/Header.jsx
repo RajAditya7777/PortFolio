@@ -30,6 +30,7 @@ const Header = () => {
           <a href="#home" onClick={(e) => scrollToSection(e, 'home')}>Home</a>
           <a href="#about" onClick={(e) => scrollToSection(e, 'about')}>About</a>
           <a href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>Projects</a>
+          <a href="#uiux-designs" onClick={(e) => scrollToSection(e, 'uiux-designs')}>UI/UX Designs</a>
           <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a>
         </div>
         <div className="social-links">

@@ -20,12 +20,12 @@ const Projects = () => {
       github: "https://github.com/RajAditya7777/Calculator"
     },
     {
-      title: "Myntra Clone",
-      description: "Recreated the Myntra website layout with a focus on static front-end design and responsive styling. The project mimics the UI/UX of an e-commerce platform, ensuring visual consistency and adaptability across devices.",
-      technologies: ["HTML", "CSS", "Responsive Design", "UI/UX"],
-      image: "https://iili.io/3XHGAcG.jpg",
-      link: "https://myntra-clone-snowy-ten.vercel.app/",
-      github: "https://github.com/RajAditya7777/Myntra-Clone.git"
+      title: "JetJourney",
+      description: "Developed a flight tracking and booking front-end web app with a responsive, user-focused design. JetJourney offers real-time flight tracking, informative pages, and seamless navigation. Features include Hero with CTA, Flight Search, About & Contact Pages, Router Navigation, Responsive UI, and Static Front-End.",
+      technologies: ["React", "JavaScript", "HTML", "CSS"],
+      image: "https://iili.io/3ZmoNPp.jpg",
+      link: "https://jet-journey.vercel.app/",
+      github: "https://github.com/RajAditya7777/Jet_Journey"
     }
   ];
 

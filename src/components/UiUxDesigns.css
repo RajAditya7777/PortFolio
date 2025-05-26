@@ -1,0 +1,111 @@
+.uiux-designs {
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.uiux-designs h2 {
+  margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+.designs-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Add some vertical space if needed */
+  margin: 0 auto;
+}
+
+.designs-marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.uiux-designs-marquee-wrapper.paused .designs-marquee-inner {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.design-card {
+  flex: 0 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  width: 500px;
+  height: auto;
+  margin: 0 16px;
+}
+
+.design-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
+}
+
+.design-image {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+
+.design-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.design-card:hover .design-image img {
+  transform: scale(1.05);
+}
+
+/* Optional: Add content styling if you decide to add text below the image */
+/*
+.design-content {
+  padding: calc(var(--spacing-unit) * 4);
+  text-align: left;
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .design-card {
+    width: 400px;
+  }
+  .design-image {
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .design-card {
+    width: 300px;
+  }
+  .design-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-card {
+    width: 200px;
+  }
+  .design-image {
+    height: 120px;
+  }
+} 
