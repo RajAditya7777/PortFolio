@@ -61,95 +61,107 @@ const Contact = () => {
       <p className="contact-intro">Send a message and I'll get back to you</p>
 
       <div className="contact-container">
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              value={formData.name}
-              onChange={handleChange}
-              required 
-              placeholder="Your name"
+        <div className="contact-left">
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                value={formData.name}
+                onChange={handleChange}
+                required 
+                placeholder="Your name"
+              />
+            </div>
+            
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                value={formData.email}
+                onChange={handleChange}
+                required 
+                placeholder="your.email@example.com"
+              />
+            </div>
+            
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                value={formData.message}
+                onChange={handleChange}
+                required
+                placeholder="Your message here..."
+              ></textarea>
+            </div>
+
+            {formStatus.error && (
+              <div className="error-message">
+                {formStatus.error}
+              </div>
+            )}
+
+            {formStatus.submitted && (
+              <div className="success-message">
+                Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+
+            <button 
+              type="submit" 
+              className="submit-btn"
+              disabled={formStatus.submitting}
+            >
+              {formStatus.submitting ? 'Sending...' : 'Send Message'}
+            </button>
+          </form>
+        </div>
+
+        <div className="contact-right">
+          <div className="prototype-image">
+            <img 
+              src="https://i.postimg.cc/k5VFT0D0/Proto-Type.png" 
+              alt="Contact Form Prototype" 
+              className="prototype-img"
             />
           </div>
           
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              value={formData.email}
-              onChange={handleChange}
-              required 
-              placeholder="your.email@example.com"
-            />
-          </div>
-          
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea 
-              id="message" 
-              name="message" 
-              rows="5" 
-              value={formData.message}
-              onChange={handleChange}
-              required
-              placeholder="Your message here..."
-            ></textarea>
-          </div>
-
-          {formStatus.error && (
-            <div className="error-message">
-              {formStatus.error}
+          <div className="contact-info">
+            <div className="contact-option">
+              <h3>Schedule a call</h3>
+              <a 
+                href="https://calendly.com/aditya-raj88005" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="schedule-btn"
+              >
+                Book a time
+              </a>
             </div>
-          )}
-
-          {formStatus.submitted && (
-            <div className="success-message">
-              Message sent successfully! I'll get back to you soon.
+            
+            <div className="contact-links">
+              <a 
+                href="mailto:aditya.raj88005@gmail.com" 
+                className="contact-link"
+              >
+                Email
+              </a>
+              <a 
+                href="https://t.me/yourusername" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="contact-link"
+              >
+                Telegram
+              </a>
             </div>
-          )}
-
-          <button 
-            type="submit" 
-            className="submit-btn"
-            disabled={formStatus.submitting}
-          >
-            {formStatus.submitting ? 'Sending...' : 'Send Message'}
-          </button>
-        </form>
-
-        <div className="contact-info">
-          <div className="contact-option">
-            <h3>Schedule a call</h3>
-            <a 
-              href="https://calendly.com/aditya-raj88005" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="schedule-btn"
-            >
-              Book a time
-            </a>
-          </div>
-          
-          <div className="contact-links">
-            <a 
-              href="mailto:aditya.raj88005@gmail.com" 
-              className="contact-link"
-            >
-              Email
-            </a>
-            <a 
-              href="https://t.me/yourusername" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="contact-link"
-            >
-              Telegram
-            </a>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ const UiUxDesigns = () => {
     { id: 1, url: 'https://i.postimg.cc/d3CKt5Pd/Screenshot-2025-05-23-at-2-10-25-PM.png', alt: 'UI/UX Design Screenshot 1' },
     { id: 2, url: 'https://i.postimg.cc/jjj0JxYR/Screenshot-2025-05-23-at-2-11-04-PM.png', alt: 'UI/UX Design Screenshot 2' },
     { id: 3, url: 'https://i.postimg.cc/mr2h5thv/Screenshot-2025-05-03-at-3-19-45-AM.png', alt: 'UI/UX Design Screenshot 3' },
+    { id: 4, url: 'https://i.postimg.cc/k5VFT0D0/Proto-Type.png', alt: 'UI/UX Design Prototype' },
   ];
 
   const [isPaused, setIsPaused] = useState(false);
